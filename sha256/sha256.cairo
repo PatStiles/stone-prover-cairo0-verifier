@@ -674,7 +674,7 @@ func main{output_ptr: felt, pedersen_ptr: felt, range_check_ptr: felt, bitwise_p
              assert memory[data_ptr + i] == val
     %}
 
-    local data_len_bytes = data_len * 32;
+    local data_len_bytes = data_len * 4;
 
     let (sha256_ptr: felt*) = alloc();
     let sha256_ptr_start = sha256_ptr;
