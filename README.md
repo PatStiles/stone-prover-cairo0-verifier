@@ -14,6 +14,7 @@ To get started, clone this repository and initialize its submodules:
 git clone https://github.com/Okm165/stone-prover-cairo0-verifier.git
 cd stone-prover-cairo0-verifier
 git submodule update --init --recursive
+git checkout --recurse-submodules recursive_layout
 ```
 
 ### Install Cairo Lang
@@ -77,7 +78,7 @@ cd stone-prover/e2e_test
 cairo-compile fibonacci.cairo --output fibonacci_compiled.json --proof_mode
 cairo-run \
     --program=fibonacci_compiled.json \
-    --layout=starknet_with_keccak \
+    --layout=recursive \
     --program_input=fibonacci_input.json \
     --air_public_input=fibonacci_public_input.json \
     --air_private_input=fibonacci_private_input.json \
@@ -104,7 +105,7 @@ jq '{ proof: . }' ../stone-prover/e2e_test/fibonacci_proof.json > cairo_verifier
 cairo-compile --cairo_path=./src src/starkware/cairo/cairo_verifier/layouts/all_cairo/cairo_verifier.cairo --output cairo_verifier.json --no_debug_info
 cairo-run \
     --program=cairo_verifier.json \
-    --layout=starknet_with_keccak \
+    --layout=recursive \
     --program_input=cairo_verifier_input.json \
     --trace_file=cairo_verifier_trace.json \
     --memory_file=cairo_verifier_memory.json \
