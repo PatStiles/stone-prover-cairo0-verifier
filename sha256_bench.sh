@@ -5,9 +5,6 @@ set -o xtrace
 # Exit on error.
 set -e
 
-echo "Switching to recursive_layout cairo verifier layout"
-git checkout --recurse-submodules recursive_layout
-
 cd stone-prover/e2e_test
 
 echo "Compiling Keccak Benchmark"
