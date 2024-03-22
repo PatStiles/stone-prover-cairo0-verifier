@@ -52,9 +52,10 @@ To run the benchmarks first ensure you are on the correct branch with the corres
 -	keccak_bench.sh -> origin/recursive_layout
 -	SOON! sha256_bench.sh -> origin/recursive_layout
 
-Input options indicate the number of bytes being hashed:
+Program Input may be generated using the following script:
 ```bash
-{INPUT} = { 32, 320, 3200, 32000 }
+chmod +x gen_input.sh
+./gen_input.sh {INPUT_LENGTH} // NUMBER_BYTES / 32
 ```
 
 Keccak (In cairo)
@@ -63,10 +64,15 @@ chmod +x keccak_bench.sh
 ./keccak_bench.sh {INPUT}
 ```
 
-Keccak Builtin
+Sha256 (In Cairo)
 ```bash
-chmod +x keccak_builtin_bench.sh
+chmod +x sha256_bench.sh
 ./keccak_builtin_bench.sh {INPUT}
+```
+
+To Run all benchmarks on a generated input:
+```bash
+chmod +x bench.sh {NUMBER_BYTES}
 ```
 ## Usage
 
