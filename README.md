@@ -72,7 +72,8 @@ chmod +x sha256_bench.sh
 
 To Run all benchmarks on a generated input:
 ```bash
-chmod +x bench.sh {NUMBER_BYTES}
+chmod +x bench.sh
+./bench.sh {NUMBER_BYTES}
 ```
 ## Usage
 
