@@ -46,11 +46,6 @@ cargo install hyperfine
 ```
 
 ### Running Benchmarks
-To run the benchmarks first ensure you are on the correct branch with the corresponding layout for the program (this is needed the cairo verifier changes dependent on the layout).
-
--	keccak_builtin_bench.sh -> origin/master
--	keccak_bench.sh -> origin/recursive_layout
--	SOON! sha256_bench.sh -> origin/recursive_layout
 
 Program Input may be generated using the following script:
 ```bash
