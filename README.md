@@ -65,10 +65,16 @@ chmod +x sha256_bench.sh
 ./keccak_builtin_bench.sh {INPUT}
 ```
 
-To Run all benchmarks on a generated input:
+To run all benchmarks on a generated input:
 ```bash
 chmod +x bench.sh
 ./bench.sh {NUMBER_BYTES}
+```
+
+To run all benchmarks targeting different trace sizes for each program on a generated input:
+```bash
+chmod +x bench_trace.sh
+./bench_trace.sh 
 ```
 ## Usage
 
